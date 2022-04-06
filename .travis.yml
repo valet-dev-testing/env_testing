@@ -1,16 +1,5 @@
-language: ruby
-sudo: false
-dist: trusty
-rvm: 2.5.0
-
-script:
-- echo "hello!"
-
-env:
-  global:
-    - FOO=bar
-    - BAZ=foo
-
-jobs: 
-  include: 
-    - script: echo "child"
+jobs:
+  exclude:
+  - rvm: 1.9.3
+    gemfile: gemfiles/Gemfile.rails-2.3.x
+    env: ISOLATED=true
