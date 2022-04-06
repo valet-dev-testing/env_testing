@@ -1,4 +1,16 @@
+language: ruby
+sudo: false
+dist: trusty
+rvm: 2.5.0
+
+script:
+- echo "hello!"
+
 env:
-  - FOO=bar
-  - BAZ=bash
-  - PACKAGE_VERSION="1.0.*"
+  global:
+    - FOO=bar
+    - BAZ=foo
+
+jobs: 
+  include: 
+    - script: echo "child"
