@@ -1,5 +1,16 @@
-jobs:
-  include:
-  - rvm: 1.9.3
-    gemfile: gemfiles/Gemfile.rails-2.3.x
-    env: BAZ=true
+language: ruby
+sudo: false
+dist: trusty
+rvm: 2.5.0
+
+script:
+- echo "hello!"
+
+env:
+  global:
+    - FOO=bar
+    - BAZ=foo
+
+jobs: 
+  include: 
+    - script: echo "child"
