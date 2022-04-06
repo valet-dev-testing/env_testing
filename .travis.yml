@@ -1,3 +1,5 @@
-env:
-  - FOO=foo BAR=bar
-  - FOO=bar BAR=foo
+jobs:
+  include:
+  - rvm: 1.9.3
+    gemfile: gemfiles/Gemfile.rails-2.3.x
+    env: BAZ=true
