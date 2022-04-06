@@ -2,4 +2,4 @@ jobs:
   include:
   - rvm: 1.9.3
     gemfile: gemfiles/Gemfile.rails-2.3.x
-    env: ISOLATED=true
+    env: BAZ=true
